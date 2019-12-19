@@ -15,14 +15,10 @@ RSpec.describe 'As a visitor', type: :feature do
   end
 
   describe 'When I visit a vending machine show page' do
-    it 'I see the name of all of the snacks associated with that vending machine along with their price' do
+    it 'I also see an average price for all of the snacks in that machine' do
       visit "/machines/#{@machine.id}"
 
-      expect(page).to have_content("Snacks in This Machine:")
-      expect(page).to have_content("Snack: #{@snack_1.name} | Price: $3.00")
-      expect(page).to have_content("Snack: #{@snack_2.name} | Price: $2.50")
-      expect(page).to have_content("Snack: #{@snack_3.name} | Price: $0.75")
-      expect(page).to have_content("Snack: #{@snack_4.name} | Price: $1.75")
+      expect(page).to have_content("Average Price: $2.00")
     end
   end
 end
