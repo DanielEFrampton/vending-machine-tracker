@@ -1,7 +1,7 @@
 <h1>Snack Info</h1>
 
-<%= @snack.name %>
-<%= number_to_currency(@snack.price / 100) %>
+<p><%= @snack.name %></p>
+<p><%= number_to_currency(@snack.price / 100) %><p>
 <% unless @snack.machines.empty? %>
   <p>Locations</p>
   <ul>
