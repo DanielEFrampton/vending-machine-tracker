@@ -8,4 +8,8 @@ class Machine < ApplicationRecord
   def avg_snack_price
     snacks.average(:price)
   end
+
+  def snack_count
+    snacks.count
+  end
 end
