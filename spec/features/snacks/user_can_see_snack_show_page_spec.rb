@@ -34,11 +34,11 @@ RSpec.describe 'As a visitor', type: :feature do
 
     it 'I see the average price for snacks in those vending machines' do
       within "#machine-#{@machine_1.id}" do
-        expect(page).to have_content('average price of $2.41')
+        expect(page).to have_content('average price of $2.42')
       end
 
       within "#machine-#{@machine_2.id}" do
-        expect(page).to have_content('average price of $1.87')
+        expect(page).to have_content('average price of $1.88')
       end
     end
 
